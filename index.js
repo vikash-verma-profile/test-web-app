@@ -8,5 +8,5 @@ try{
     const payload=Json.strigify(github.context.payload,undefined,2);
     console.log(`the event payload: ${payload}`);
 }catch(err){
-    core.setFailed(error.message);
+    core.setFailed(err.message);
 }
