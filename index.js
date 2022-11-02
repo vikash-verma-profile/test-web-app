@@ -5,7 +5,7 @@ try{
     console.log(`Hello ${name}`);
     const time=(new Date()).toTimeString();
     core.setOutput("time",time);
-    const payload=Json.strigify(github.context.payload,undefined,2);
+    const payload=JSON.stringify(github.context.payload,undefined,2);
     console.log(`the event payload: ${payload}`);
 }catch(err){
     core.setFailed(err.message);
